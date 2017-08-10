@@ -1,0 +1,16 @@
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/setting_tab_container"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@android:color/white"
+    android:clickable="true"
+    tools:context="com.fsoft.sonic_larue.khanhnv10.moviestore.view.movie.SettingTabFragment">
+
+    <fragment
+        android:id="@+id/setting_fragment"
+        class="com.fsoft.sonic_larue.khanhnv10.moviestore.view.movie.SettingMovieFragment"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
+
+</FrameLayout>

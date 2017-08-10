@@ -1,0 +1,14 @@
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools" android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:id="@+id/all_reminder_content"
+    android:background="@android:color/white"
+    android:clickable="true"
+    tools:context="com.fsoft.sonic_larue.khanhnv10.moviestore.view.movie.ReminderFragment">
+
+    <com.fsoft.sonic_larue.khanhnv10.moviestore.view.movie.ContextMenuRecyclerView
+        android:id="@+id/all_reminder"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"/>
+
+</FrameLayout>

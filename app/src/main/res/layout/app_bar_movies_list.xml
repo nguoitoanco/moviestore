@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.design.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fitsSystemWindows="true"
+    tools:context="com.fsoft.sonic_larue.khanhnv10.moviestore.view.main.MainActivity">
+
+    <RelativeLayout
+        android:id="@+id/app_bar"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <android.support.design.widget.AppBarLayout
+            android:id="@+id/header_view"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:theme="@style/AppTheme.AppBarOverlay">
+
+            <!-- Toolbar-->
+            <android.support.v7.widget.Toolbar
+                android:id="@+id/movies_action_bar"
+                android:layout_width="match_parent"
+                android:layout_height="?attr/actionBarSize"
+                android:background="?attr/colorPrimary"
+                android:elevation="21dp" >
+
+                <TextView
+                    android:id="@+id/movie_type_option"
+                    android:layout_width="wrap_content"
+                    android:text="@string/category_pop_movie"
+                    android:layout_height="wrap_content"
+                    android:textSize="20dp"
+                    android:maxLines="1"
+                    android:layout_gravity="center_vertical"
+                    android:drawableRight="@mipmap/ic_arrow_drop_down"
+                    android:gravity="center"/>
+
+        </android.support.v7.widget.Toolbar>
+        </android.support.design.widget.AppBarLayout>
+
+        <RelativeLayout
+            android:id="@+id/main_screen"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_below="@+id/header_view">
+
+            <include
+                layout="@layout/content_main"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_above="@+id/tab_view" />
+
+            <include
+                android:id="@+id/tab_view"
+                layout="@layout/tab_layout"
+                android:layout_width="match_parent"
+                android:layout_height="?attr/actionBarSize"
+                android:layout_alignParentBottom="true" />
+        </RelativeLayout>
+    </RelativeLayout>
+</android.support.design.widget.CoordinatorLayout>

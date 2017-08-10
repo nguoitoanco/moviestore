@@ -1,0 +1,134 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_margin="10dp"
+    android:background="@android:color/white"
+    android:orientation="vertical"
+    android:weightSum="5.5">
+
+    <!-- Profile info-->
+    <RelativeLayout
+        android:id="@+id/user_info"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="3"
+        android:padding="5dp">
+
+        <!-- Avatar-->
+        <com.fsoft.sonic_larue.khanhnv10.moviestore.service.util.CircleImageView
+            android:id="@+id/nav_profile_icon"
+            android:src="@mipmap/profile_demo"
+            android:layout_centerHorizontal="true"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+
+        <TextView
+            android:id="@+id/nav_name"
+            android:text="Khanh Nguyen"
+            android:textSize="15sp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/nav_profile_icon"
+            android:gravity="center_horizontal"/>
+
+        <TextView
+            android:id="@+id/nav_mail"
+            android:text="abc@fsoft.com"
+            android:textSize="15sp"
+            android:drawableLeft="@mipmap/ic_mail"
+            android:layout_below="@+id/nav_name"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_vertical"/>
+
+        <TextView
+            android:id="@+id/nav_date"
+            android:text="1988/04/17"
+            android:textSize="15sp"
+            android:drawableLeft="@mipmap/ic_cake"
+            android:layout_below="@+id/nav_mail"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_vertical"/>
+
+        <TextView
+            android:id="@+id/nav_gender"
+            android:text="Female"
+            android:textSize="15sp"
+            android:drawableLeft="@mipmap/ic_person"
+            android:layout_below="@+id/nav_date"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_vertical"/>
+
+        <Button
+            android:id="@+id/profile_edit_btn"
+            android:layout_below="@id/nav_gender"
+            android:gravity="center"
+            android:text="@string/btn_edit"
+            android:textSize="15sp"
+            android:textColor="@color/cardview_light_background"
+            android:background="@drawable/rounded_btn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+
+        <Button
+            android:id="@+id/profile_switch_btn"
+            android:layout_below="@id/nav_gender"
+            android:gravity="center"
+            android:text="@string/btn_switch_profile"
+            android:textSize="15sp"
+            android:textColor="@color/cardview_light_background"
+            android:background="@drawable/rounded_btn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:layout_toRightOf="@id/profile_edit_btn"/>
+
+    </RelativeLayout>
+
+    <!-- Reminder info-->
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="2">
+
+        <TextView
+            android:id="@+id/reminder_info"
+            android:text="@string/txt_reminder"
+            android:textSize="20dp"
+            android:textStyle="bold|italic"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+
+        <android.support.v7.widget.RecyclerView
+            android:id="@+id/reminder_list"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/reminder_info"
+            android:padding="5dp"
+            android:background="@drawable/border_retag"/>
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_weight="0.5"
+        android:layout_height="0dp"
+        android:layout_gravity="center_horizontal">
+
+        <Button
+            android:id="@+id/show_all_btn"
+            android:background="@drawable/rounded_btn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/show_all"
+            android:textSize="15sp"
+            android:textColor="@color/cardview_light_background"
+            android:padding="10dp"
+            android:layout_marginTop="10dp"/>
+    </RelativeLayout>
+
+
+</LinearLayout>

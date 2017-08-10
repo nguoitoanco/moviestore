@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/fav_movie_list"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <android.support.v7.widget.CardView
+        android:id="@+id/movie_card"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:paddingTop="2dp"
+            android:paddingBottom="5dp">
+
+            <TextView
+                android:id="@+id/movie_title"
+                android:textSize="15dp"
+                android:textColor="@color/colorPrimary"
+                android:textStyle="bold"
+                android:maxLines="1"
+                android:layout_marginLeft="5dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+
+            <ImageView
+                android:id="@+id/favourite_image"
+                android:src="@mipmap/ic_start_selected"
+                android:layout_alignParentRight="true"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_below="@+id/movie_title"
+                android:layout_alignParentBottom="true"
+                >
+
+                <com.android.volley.toolbox.NetworkImageView
+                    android:scaleType="centerCrop"
+                    android:id="@+id/movie_icon"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="5dp"
+                    android:layout_marginRight="5dp" />
+
+
+                <TextView
+                    android:id="@+id/release_date_title"
+                    android:layout_toRightOf="@id/movie_icon"
+                    android:text="@string/date"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+
+                <TextView
+                    android:id="@+id/release_date"
+                    android:layout_toRightOf="@id/release_date_title"
+                    android:textColor="@color/colorAccent"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    />
+
+                <TextView
+                    android:id="@+id/movie_rate_title"
+                    android:layout_toRightOf="@id/movie_icon"
+                    android:layout_below="@id/release_date"
+                    android:text="@string/rate_count"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+
+                <TextView
+                    android:id="@+id/movie_rate"
+                    android:layout_toRightOf="@id/movie_rate_title"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/colorAccent"
+                    android:layout_below="@+id/release_date" />
+
+                <TextView
+                    android:id="@+id/movie_overview_title"
+                    android:layout_toRightOf="@id/movie_icon"
+                    android:layout_below="@id/movie_rate"
+                    android:text="@string/over_view"
+                    android:textColor="@color/colorAccent"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+
+                <TextView
+                    android:id="@+id/movie_overview"
+                    android:layout_toRightOf="@id/movie_icon"
+                    android:ellipsize="end"
+                    android:maxLines="3"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/movie_overview_title"/>
+
+            </RelativeLayout>
+        </RelativeLayout>
+    </android.support.v7.widget.CardView>
+</RelativeLayout>

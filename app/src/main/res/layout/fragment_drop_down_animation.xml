@@ -1,0 +1,69 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:clickable="true"
+    android:orientation="vertical"
+    android:weightSum="10"
+    android:id="@+id/all_animation"
+    tools:context="com.fsoft.sonic_larue.khanhnv10.moviestore.view.movie.DropDownAnimationFragment">
+
+    <RelativeLayout
+        android:id="@+id/main_anim"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="4"
+        android:background="@color/colorPrimary">
+
+        <TextView
+            android:id="@+id/popular_option"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/category_pop_movie"
+            android:textColor="@color/textColorPrimary"
+            android:textSize="20sp"
+            android:layout_margin="5dp"
+            android:gravity="center"/>
+
+        <TextView
+            android:id="@+id/top_rate_option"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/category_rate_movie"
+            android:layout_below="@+id/popular_option"
+            android:textColor="@color/textColorPrimary"
+            android:layout_margin="5dp"
+            android:textSize="20sp"
+            android:gravity="center"/>
+        <TextView
+            android:id="@+id/upcoming_option"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/category_Upcoming_movie"
+            android:textColor="@color/textColorPrimary"
+            android:layout_margin="5dp"
+            android:textSize="20sp"
+            android:layout_below="@+id/top_rate_option"
+            android:gravity="center"/>
+
+        <TextView
+            android:id="@+id/now_playing_option"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/category_Now_movie"
+            android:layout_below="@+id/upcoming_option"
+            android:textColor="@color/textColorPrimary"
+            android:layout_margin="5dp"
+            android:textSize="20sp"
+            android:gravity="center"
+            android:layout_marginBottom="10dp"/>
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/redundant"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="6"
+        android:background="#80000000"/>
+
+</LinearLayout>

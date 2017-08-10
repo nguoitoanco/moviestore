@@ -1,0 +1,164 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@android:color/white"
+    android:clickable="true"
+    android:orientation="vertical"
+    android:weightSum="9"
+    tools:context="com.fsoft.sonic_larue.khanhnv10.moviestore.view.movie.DetailMovieFragment">
+
+    <RelativeLayout
+        android:id="@+id/detail_header"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1.5"
+        android:background="@android:drawable/dialog_holo_light_frame">
+
+        <ImageView
+            android:id="@+id/fav_icon"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_centerVertical="true"
+            android:src="@mipmap/ic_star_border_black" />
+
+        <TextView
+            android:id="@+id/release_date_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toRightOf="@id/fav_icon"
+            android:text="@string/date"
+            android:textSize="15sp"
+            android:textStyle="bold"/>
+
+        <TextView
+            android:id="@+id/release_date"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/colorAccent"
+            android:textSize="15sp"
+            android:textStyle="bold"
+            android:layout_toRightOf="@id/release_date_title"/>
+
+        <TextView
+            android:id="@+id/movie_rate_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="15sp"
+            android:textStyle="bold"
+            android:layout_alignBottom="@+id/fav_icon"
+            android:text="@string/rate_count"
+            android:layout_alignParentBottom="true"
+            android:layout_toRightOf="@id/fav_icon"/>
+
+        <TextView
+            android:id="@+id/movie_rate_count"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="15dp"
+            android:textStyle="bold"
+            android:layout_alignBottom="@+id/fav_icon"
+            android:layout_toRightOf="@id/movie_rate_title"
+            android:textColor="@color/colorAccent"
+            android:layout_alignParentBottom="true"/>
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/detail_body"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="4">
+
+        <RelativeLayout
+            android:id="@+id/reminder_action"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:layout_marginLeft="7dp">
+
+            <com.android.volley.toolbox.NetworkImageView
+                android:id="@+id/movie_icon"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:scaleType="centerCrop" />
+
+            <Button
+                android:id="@+id/remind_button"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="15sp"
+                android:textStyle="bold"
+                android:layout_margin="10dp"
+                android:padding="10dp"
+                android:text="@string/remind_button"
+                android:textColor="@color/cardview_light_background"
+                android:layout_centerInParent="true"
+                android:layout_below="@id/movie_icon"
+                android:background="@drawable/rounded_btn"/>
+
+            <TextView
+                android:id="@+id/reminder_date"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="15sp"
+                android:textColor="@color/colorAccent"
+                android:layout_marginLeft="5dp"
+                android:layout_marginTop="10dp"
+                android:layout_below="@+id/remind_button"
+                android:layout_centerInParent="true" />
+
+        </RelativeLayout>
+
+        <TextView
+            android:id="@+id/movie_overview_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:layout_marginLeft="10dp"
+            android:text="@string/over_view"
+            android:textColor="@color/colorAccent"
+            android:textSize="15sp"
+            android:textStyle="bold|italic"
+            android:layout_toRightOf="@id/reminder_action"/>
+
+        <TextView
+            android:id="@+id/movie_overview"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="15sp"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="10dp"
+            android:layout_toRightOf="@id/reminder_action"
+            android:layout_below="@+id/movie_overview_title"
+            android:scrollbars="vertical" />
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/detail_footer"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_marginTop="10dp"
+        android:layout_weight="3">
+
+        <TextView
+            android:id="@+id/cast_and_crew"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:text="@string/cast_and_crew"
+            android:textColor="@color/colorAccent"
+            android:textSize="15sp"
+            android:textStyle="bold|italic"/>
+
+        <android.support.v7.widget.RecyclerView
+            android:id="@+id/cast_and_crew_list"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_below="@+id/cast_and_crew"
+            android:background="@android:drawable/dialog_holo_light_frame"
+            android:scrollbars="horizontal" />
+    </RelativeLayout>
+</LinearLayout>

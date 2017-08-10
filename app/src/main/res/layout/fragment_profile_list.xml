@@ -1,0 +1,57 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/profile_all"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@android:color/white"
+    android:clickable="true"
+    tools:context="com.fsoft.sonic_larue.khanhnv10.moviestore.view.profile.ProfileListFragment">
+
+    <!-- Toolbar-->
+    <RelativeLayout
+        android:id="@+id/profile_action_bar"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:background="?attr/colorPrimary"
+        android:elevation="21dp"
+        android:gravity="center_vertical"
+        android:padding="5dp">
+
+        <TextView
+            android:id="@+id/profile_action_cancel"
+            android:layout_width="wrap_content"
+            android:text="@string/do_cancel"
+            android:layout_height="wrap_content"
+            android:textSize="20sp"
+            android:textColor="@color/textColorPrimary"
+            android:gravity="left" />
+        <TextView
+            android:id="@+id/profile_title"
+            android:layout_width="wrap_content"
+            android:text="@string/profile_title"
+            android:layout_height="wrap_content"
+            android:textSize="20sp"
+            android:textColor="@color/textColorPrimary"
+            android:gravity="center_horizontal"
+            android:layout_centerHorizontal="true"/>
+    </RelativeLayout>
+
+    <TextView
+        android:id="@+id/add_profile"
+        android:text="@string/new_profile"
+        android:textSize="15sp"
+        android:textStyle="bold"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/profile_action_bar"
+        android:drawableLeft="@mipmap/ic_add"
+        android:gravity="center_vertical"/>
+
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/pro_recycle_view"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/add_profile"
+        android:padding="5dp"/>
+
+</RelativeLayout>

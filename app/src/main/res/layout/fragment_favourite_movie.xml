@@ -1,0 +1,12 @@
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools" android:layout_width="match_parent"
+    android:id="@+id/fav_movie"
+    android:layout_height="match_parent"
+    tools:context="com.fsoft.sonic_larue.khanhnv10.moviestore.view.movie.FavouriteMovieFragment">
+
+    <com.fsoft.sonic_larue.khanhnv10.moviestore.view.movie.ContextMenuRecyclerView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/rv_fav_movie"/>
+
+</FrameLayout>

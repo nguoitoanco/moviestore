@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:id="@+id/fav_movie_delete"
+        android:title="@string/fav_movie_delete_item"></item>
+    <item
+        android:id="@+id/fav_movie_cancel"
+        android:title="@string/fav_movie_delete_cancel_item"></item>
+</menu>

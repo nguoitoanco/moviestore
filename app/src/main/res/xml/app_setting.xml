@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android">
+    <PreferenceCategory
+        android:title="@string/filter_group_title">
+        <ListPreference
+            android:defaultValue="0"
+            android:key="category_list"
+            android:title="@string/category_title"
+            android:entries="@array/category_title"
+            android:entryValues="@array/category_value" />
+
+        <Preference
+            android:key="filter_on_rate"
+            android:title="@string/from_rate_title"
+            android:defaultValue="0"/>
+
+        <EditTextPreference
+            android:key="filter_on_year"
+            android:title="@string/filter_year_title"
+            android:dialogTitle="EditText Dialog" />
+
+    </PreferenceCategory>
+    <PreferenceCategory
+        android:title="@string/sort_group_title">
+        <ListPreference
+            android:title="@string/sort_group_title"
+            android:key="sort_by_list"
+            android:entries="@array/sortby_title"
+            android:entryValues="@array/sortby_value"/>
+    </PreferenceCategory>
+</PreferenceScreen>
